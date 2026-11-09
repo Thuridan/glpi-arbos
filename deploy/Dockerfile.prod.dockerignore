@@ -10,3 +10,5 @@ files
 tests
 .dump
 *.log
+
+tools
