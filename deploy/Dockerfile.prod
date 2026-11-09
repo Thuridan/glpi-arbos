@@ -10,3 +10,4 @@ RUN mkdir -p /var/www/glpi/files /var/www/glpi/config \
 RUN printf 'xdebug.mode=off\ndisplay_errors=Off\nlog_errors=On\nmax_execution_time=180\nmemory_limit=512M\nsession.cookie_httponly=On\nsession.cookie_samesite=Lax\n' > /usr/local/etc/php/custom_conf.d/production.ini
 ENV GLPI_ENVIRONMENT_TYPE=production
 USER www-data
+RUN composer dump-autoload --no-dev --optimize --no-scripts --no-interaction
