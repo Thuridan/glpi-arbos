@@ -1,0 +1,16 @@
+{
+  "source_commit": "da39b904efc70ae69100d1ca12fadbeecb7c9fc3",
+  "glpi_version": "12.0.2-dev",
+  "api_version": "3.0.0",
+  "tracked_files_outside_docs": 5223,
+  "schema_tables": 447,
+  "schema_columns": 4748,
+  "schema_sha256": "ceeb4c090105391ed2a83eb9a59d6b4775f3cd4872c315bbeb6530058ce490c3",
+  "ddl_foreign_keys": 0,
+  "api_unique_routes": 570,
+  "web_routes_dev": 152,
+  "cli_commands_dev": 113,
+  "composer_runtime_packages": 150,
+  "composer_dev_packages": 75,
+  "npm_installations": 1017
+}

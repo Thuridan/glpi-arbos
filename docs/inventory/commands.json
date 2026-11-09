@@ -1,0 +1,573 @@
+{
+  "application": {
+    "name": "GLPI CLI",
+    "version": "12.0.2-dev"
+  },
+  "commands": [
+    {
+      "name": "_complete",
+      "aliases": [],
+      "description": "Internal command to provide shell completion suggestions"
+    },
+    {
+      "name": "assets:cleansoftware",
+      "aliases": [],
+      "description": "Remove software versions with no installation and software with no version"
+    },
+    {
+      "name": "assets:purgesoftware",
+      "aliases": [],
+      "description": "Purge software with no version that are deleted."
+    },
+    {
+      "name": "build:compile_scss",
+      "aliases": [],
+      "description": "Compile SCSS file."
+    },
+    {
+      "name": "build:generate_code_manifest",
+      "aliases": [],
+      "description": "Generate GLPI source code manifest that could be used to validate source code integrity."
+    },
+    {
+      "name": "cache:clear",
+      "aliases": [],
+      "description": "Clear GLPI cache."
+    },
+    {
+      "name": "cache:configure",
+      "aliases": [],
+      "description": "Define cache configuration"
+    },
+    {
+      "name": "cache:debug",
+      "aliases": [],
+      "description": "Debug GLPI cache."
+    },
+    {
+      "name": "cache:set_namespace_prefix",
+      "aliases": [],
+      "description": "Define cache namespace prefix"
+    },
+    {
+      "name": "completion",
+      "aliases": [],
+      "description": "Dump the shell completion script"
+    },
+    {
+      "name": "config:set",
+      "aliases": [],
+      "description": "Set configuration value"
+    },
+    {
+      "name": "database:check_schema_integrity",
+      "aliases": [],
+      "description": "Check for schema differences between current database and installation file."
+    },
+    {
+      "name": "database:configure",
+      "aliases": [],
+      "description": "Define database configuration and writes it to the configuration file"
+    },
+    {
+      "name": "database:enable_timezones",
+      "aliases": [],
+      "description": "Enable timezones usage."
+    },
+    {
+      "name": "database:install",
+      "aliases": [],
+      "description": "Install database schema"
+    },
+    {
+      "name": "database:is_up_to_date",
+      "aliases": [],
+      "description": "Check if the database schema version matches the installed GLPI version."
+    },
+    {
+      "name": "database:update",
+      "aliases": [],
+      "description": "Update database schema to new version"
+    },
+    {
+      "name": "diagnostic:check_documents_integrity",
+      "aliases": [],
+      "description": "Validate files integrity for GLPI's documents."
+    },
+    {
+      "name": "diagnostic:check_orphaned_user_pictures",
+      "aliases": [],
+      "description": "Check user picture references that no longer exist on the filesystem."
+    },
+    {
+      "name": "diagnostic:check_source_code_integrity",
+      "aliases": [],
+      "description": "Check GLPI source code file integrity."
+    },
+    {
+      "name": "help",
+      "aliases": [],
+      "description": "Display help for a command"
+    },
+    {
+      "name": "ldap:synchronize_users",
+      "aliases": [],
+      "description": "Synchronize users against LDAP server information"
+    },
+    {
+      "name": "list",
+      "aliases": [],
+      "description": "List commands"
+    },
+    {
+      "name": "maintenance:disable",
+      "aliases": [],
+      "description": "Disable maintenance mode"
+    },
+    {
+      "name": "maintenance:enable",
+      "aliases": [],
+      "description": "Enable maintenance mode"
+    },
+    {
+      "name": "marketplace:download",
+      "aliases": [],
+      "description": "Download plugin from the GLPI marketplace"
+    },
+    {
+      "name": "marketplace:info",
+      "aliases": [],
+      "description": "Get information about a plugin"
+    },
+    {
+      "name": "marketplace:search",
+      "aliases": [],
+      "description": "Search GLPI marketplace"
+    },
+    {
+      "name": "marketplace:upgrade",
+      "aliases": [],
+      "description": "Download all plugins to their latest compatible versions, update all active plugins and reactivate those that were active."
+    },
+    {
+      "name": "migration:appliances_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate Appliances plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:build_missing_timestamps",
+      "aliases": [],
+      "description": "Set missing `date_creation` and `date_mod` values using log entries."
+    },
+    {
+      "name": "migration:compute_documents_size",
+      "aliases": [],
+      "description": "Computes the missing file sizes in the database."
+    },
+    {
+      "name": "migration:databases_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate Databases plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:domains_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate Domains plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:dynamic_row_format",
+      "aliases": [],
+      "description": "Convert database tables to \"Dynamic\" row format (required for \"utf8mb4\" character support)."
+    },
+    {
+      "name": "migration:formcreator_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate Formcreator plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:genericobject_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:migrate_all",
+      "aliases": [],
+      "description": "Execute all recommended optional migrations."
+    },
+    {
+      "name": "migration:myisam_to_innodb",
+      "aliases": [],
+      "description": "Migrate MyISAM tables to InnoDB"
+    },
+    {
+      "name": "migration:racks_plugin_to_core",
+      "aliases": [],
+      "description": "Migrate Racks plugin data into GLPI core tables"
+    },
+    {
+      "name": "migration:timestamps",
+      "aliases": [],
+      "description": "Convert \"datetime\" fields to \"timestamp\" to use timezones."
+    },
+    {
+      "name": "migration:unsigned_keys",
+      "aliases": [],
+      "description": "Migrate primary/foreign keys to unsigned integers"
+    },
+    {
+      "name": "migration:utf8mb4",
+      "aliases": [],
+      "description": "Convert database character set from \"utf8\" to \"utf8mb4\"."
+    },
+    {
+      "name": "plugin:activate",
+      "aliases": [],
+      "description": "Activate plugin(s)"
+    },
+    {
+      "name": "plugin:deactivate",
+      "aliases": [],
+      "description": "Deactivate plugin(s)"
+    },
+    {
+      "name": "plugin:install",
+      "aliases": [],
+      "description": "Run plugin(s) installation script"
+    },
+    {
+      "name": "plugin:list",
+      "aliases": [],
+      "description": "List all plugins present in the plugins directory or from the marketplace"
+    },
+    {
+      "name": "plugin:resume_execution",
+      "aliases": [],
+      "description": "Resume execution of all active plugins"
+    },
+    {
+      "name": "plugin:suspend_execution",
+      "aliases": [],
+      "description": "Suspend execution of all active plugins"
+    },
+    {
+      "name": "plugin:uninstall",
+      "aliases": [],
+      "description": "Run plugin(s) uninstallation script"
+    },
+    {
+      "name": "rules:process_software_category_rules",
+      "aliases": [],
+      "description": "Process software category rules"
+    },
+    {
+      "name": "rules:replay_dictionnary_rules",
+      "aliases": [],
+      "description": "Replay dictionary rules on existing items"
+    },
+    {
+      "name": "security:change_key",
+      "aliases": [],
+      "description": "Change password storage key and update values in database."
+    },
+    {
+      "name": "security:change_oauth_key",
+      "aliases": [],
+      "description": "(Re)generate OAuth keys"
+    },
+    {
+      "name": "security:disable_2fa",
+      "aliases": [],
+      "description": "Disable 2FA for a user"
+    },
+    {
+      "name": "security:session:list",
+      "aliases": [],
+      "description": "List active sessions"
+    },
+    {
+      "name": "security:session:revoke",
+      "aliases": [],
+      "description": "Revoke login sessions"
+    },
+    {
+      "name": "symfony:about",
+      "aliases": [],
+      "description": "Display information about the current project"
+    },
+    {
+      "name": "symfony:assets:install",
+      "aliases": [],
+      "description": "Install bundle's web assets under a public directory"
+    },
+    {
+      "name": "symfony:cache:clear",
+      "aliases": [],
+      "description": "Clear the cache"
+    },
+    {
+      "name": "symfony:cache:pool:clear",
+      "aliases": [],
+      "description": "Clear cache pools"
+    },
+    {
+      "name": "symfony:cache:pool:delete",
+      "aliases": [],
+      "description": "Delete an item from a cache pool"
+    },
+    {
+      "name": "symfony:cache:pool:invalidate-tags",
+      "aliases": [],
+      "description": "Invalidate cache tags for all or a specific pool"
+    },
+    {
+      "name": "symfony:cache:pool:list",
+      "aliases": [],
+      "description": "List available cache pools"
+    },
+    {
+      "name": "symfony:cache:pool:prune",
+      "aliases": [],
+      "description": "Prune cache pools"
+    },
+    {
+      "name": "symfony:cache:warmup",
+      "aliases": [],
+      "description": "Warm up an empty cache"
+    },
+    {
+      "name": "symfony:config:dump-reference",
+      "aliases": [],
+      "description": "Dump the default configuration for an extension"
+    },
+    {
+      "name": "symfony:debug:autowiring",
+      "aliases": [],
+      "description": "List classes/interfaces you can use for autowiring"
+    },
+    {
+      "name": "symfony:debug:config",
+      "aliases": [],
+      "description": "Dump the current configuration for an extension"
+    },
+    {
+      "name": "symfony:debug:container",
+      "aliases": [],
+      "description": "Display current services for an application"
+    },
+    {
+      "name": "symfony:debug:event-dispatcher",
+      "aliases": [],
+      "description": "Display configured listeners for an application"
+    },
+    {
+      "name": "symfony:debug:router",
+      "aliases": [],
+      "description": "Display current routes for an application"
+    },
+    {
+      "name": "symfony:debug:serializer",
+      "aliases": [],
+      "description": "Display serialization information for classes"
+    },
+    {
+      "name": "symfony:debug:twig",
+      "aliases": [],
+      "description": "Show a list of twig functions, filters, globals and tests"
+    },
+    {
+      "name": "symfony:debug:twig-component",
+      "aliases": [],
+      "description": "Display components and them usages for an application"
+    },
+    {
+      "name": "symfony:error:dump",
+      "aliases": [],
+      "description": "Dump error pages to plain HTML files that can be directly served by a web server"
+    },
+    {
+      "name": "symfony:lint:container",
+      "aliases": [],
+      "description": "Ensure that arguments injected into services match type declarations"
+    },
+    {
+      "name": "symfony:lint:twig",
+      "aliases": [],
+      "description": "Lint a Twig template and outputs encountered errors"
+    },
+    {
+      "name": "symfony:mailer:test",
+      "aliases": [],
+      "description": "Test Mailer transports by sending an email"
+    },
+    {
+      "name": "symfony:router:match",
+      "aliases": [],
+      "description": "Help debug routes by simulating a path info match"
+    },
+    {
+      "name": "symfony:secrets:decrypt-to-local",
+      "aliases": [],
+      "description": "Decrypt all secrets and stores them in the local vault"
+    },
+    {
+      "name": "symfony:secrets:encrypt-from-local",
+      "aliases": [],
+      "description": "Encrypt all local secrets to the vault"
+    },
+    {
+      "name": "symfony:secrets:generate-keys",
+      "aliases": [],
+      "description": "Generate new encryption keys"
+    },
+    {
+      "name": "symfony:secrets:list",
+      "aliases": [],
+      "description": "List all secrets"
+    },
+    {
+      "name": "symfony:secrets:remove",
+      "aliases": [],
+      "description": "Remove a secret from the vault"
+    },
+    {
+      "name": "symfony:secrets:reveal",
+      "aliases": [],
+      "description": "Reveal the value of a secret"
+    },
+    {
+      "name": "symfony:secrets:set",
+      "aliases": [],
+      "description": "Set a secret in the vault"
+    },
+    {
+      "name": "symfony:server:dump",
+      "aliases": [],
+      "description": "Start a dump server that collects and displays dumps in a single place"
+    },
+    {
+      "name": "system:check_requirements",
+      "aliases": [],
+      "description": "Check system requirements"
+    },
+    {
+      "name": "system:list_services",
+      "aliases": [],
+      "description": "List system services"
+    },
+    {
+      "name": "system:status",
+      "aliases": [],
+      "description": "Check system status"
+    },
+    {
+      "name": "task:unlock",
+      "aliases": [],
+      "description": "Unlock automatic tasks"
+    },
+    {
+      "name": "tools:check_database_keys",
+      "aliases": [],
+      "description": "Check database for missing and errounous keys."
+    },
+    {
+      "name": "tools:check_database_schema_consistency",
+      "aliases": [],
+      "description": "Check database schema consistency."
+    },
+    {
+      "name": "tools:check_decorative_icons",
+      "aliases": [],
+      "description": "Check that decorative icons are hidden from assistive technologies."
+    },
+    {
+      "name": "tools:check_twig_templates_syntax",
+      "aliases": [],
+      "description": "Check twig templates syntax is valid"
+    },
+    {
+      "name": "tools:delete_orphan_logs",
+      "aliases": [],
+      "description": "Delete orphan logs"
+    },
+    {
+      "name": "tools:generate_api_snapshot",
+      "aliases": [],
+      "description": "Updates a snapshot used for API version tests"
+    },
+    {
+      "name": "tools:generate_dev_ldap",
+      "aliases": [],
+      "description": "Create a ready to use AuthLDAP object."
+    },
+    {
+      "name": "tools:generate_forms_for_each_illustrations",
+      "aliases": [],
+      "description": "Generate one form per available illustration."
+    },
+    {
+      "name": "tools:generate_hooks_documentation",
+      "aliases": [],
+      "description": "Generate plugin hooks documentation"
+    },
+    {
+      "name": "tools:generate_illustration_translations",
+      "aliases": [],
+      "description": "Generate a files Illustrations tags and title. It's required for translations generation - tools:locales:extract"
+    },
+    {
+      "name": "tools:generate_knowbase_items",
+      "aliases": [],
+      "description": "Generate a large knowledge base article tree, to test the KB with a lot of data."
+    },
+    {
+      "name": "tools:licence_headers_check",
+      "aliases": [],
+      "description": "Check licence header in code source files."
+    },
+    {
+      "name": "tools:locales:compile",
+      "aliases": [],
+      "description": "Compile MO files from PO files."
+    },
+    {
+      "name": "tools:locales:extract",
+      "aliases": [],
+      "description": "Extract strings from the project to generate POT file."
+    },
+    {
+      "name": "tools:plugin:release",
+      "aliases": [],
+      "description": "Build a GLPI plugin release archive."
+    },
+    {
+      "name": "user:create",
+      "aliases": [],
+      "description": "Create a new local GLPI user"
+    },
+    {
+      "name": "user:delete",
+      "aliases": [],
+      "description": "Delete a GLPI user"
+    },
+    {
+      "name": "user:disable",
+      "aliases": [],
+      "description": "Disable a GLPI user"
+    },
+    {
+      "name": "user:enable",
+      "aliases": [],
+      "description": "Enable a GLPI user"
+    },
+    {
+      "name": "user:grant",
+      "aliases": [],
+      "description": "Grant a profile assignment to a user"
+    },
+    {
+      "name": "user:reset_password",
+      "aliases": [],
+      "description": "Reset the password of a local GLPI user"
+    }
+  ]
+}
