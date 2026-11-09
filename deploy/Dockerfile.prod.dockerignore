@@ -1,0 +1,12 @@
+.git
+**/.git
+.github
+node_modules
+.env
+.env.*
+config/*
+!config/.gitkeep
+files
+tests
+.dump
+*.log

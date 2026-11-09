@@ -1,0 +1,12 @@
+# Reuses the PHP runtime already validated in Dev; bundles the compiled application.
+ARG RUNTIME_IMAGE=glpi-app
+FROM ${RUNTIME_IMAGE}
+ARG GLPI_COMMIT
+LABEL org.opencontainers.image.revision="${GLPI_COMMIT}"
+USER root
+COPY --chown=www-data:www-data . /var/www/glpi/
+RUN mkdir -p /var/www/glpi/files /var/www/glpi/config \
+    && chown www-data:www-data /var/www/glpi/files /var/www/glpi/config
+RUN printf 'xdebug.mode=off\ndisplay_errors=Off\nlog_errors=On\nmax_execution_time=180\nmemory_limit=512M\nsession.cookie_httponly=On\nsession.cookie_samesite=Lax\n' > /usr/local/etc/php/custom_conf.d/production.ini
+ENV GLPI_ENVIRONMENT_TYPE=production
+USER www-data

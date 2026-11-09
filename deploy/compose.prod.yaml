@@ -1,0 +1,37 @@
+name: glpi-prod
+services:
+  app:
+    image: ${GLPI_PROD_IMAGE:?Specify the validated dev image}
+    restart: unless-stopped
+    environment:
+      GLPI_ENVIRONMENT_TYPE: production
+      GLPI_URI: http://localhost:8081
+    ports:
+      - "8081:80"
+    volumes:
+      - config:/var/www/glpi/config
+      - files:/var/www/glpi/files
+      - marketplace:/var/www/glpi/marketplace
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mariadb:11.8
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: glpi
+      MARIADB_USER: glpi
+      MARIADB_PASSWORD: ${GLPI_PROD_DB_PASSWORD:?Set a production database password}
+      MARIADB_ROOT_PASSWORD: ${GLPI_PROD_DB_ROOT_PASSWORD:?Set a production root password}
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+volumes:
+  db:
+  config:
+  files:
+  marketplace:

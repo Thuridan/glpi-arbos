@@ -2,7 +2,7 @@
 
 Repositório do projeto: https://github.com/Thuridan/glpi-arbos
 Upstream: https://github.com/glpi-project/glpi
-Branch de trabalho: `main`, baseada na `12.0/bugfixes` do GLPI; commit inicial: `96af3bc`.
+Branch de trabalho: `dev`, baseada na `12.0/bugfixes` do GLPI; commit inicial: `96af3bc`.
 
 ## Estrutura
 
@@ -104,7 +104,8 @@ git commit -m "Descreve a alteração"
 git push -u origin feature/minha-alteracao
 ```
 
-Abra um pull request da branch de trabalho para `main` em `Thuridan/glpi-arbos`.
+O fluxo obrigatório é Dev → commit em `dev` → validação em Prod → promoção para `main`.
+Consulte `FLUXO-DESENVOLVIMENTO.md`. Branches auxiliares devem ser integradas e validadas em Dev antes da promoção.
 Para consultar atualizações do projeto original:
 
 ```bash
